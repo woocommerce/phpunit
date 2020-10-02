@@ -14,7 +14,7 @@ use PHPUnit\Framework\MockObject\Matcher\AnyParameters;
 /**
  * Builder interface for parameter matchers.
  */
-interface ParametersMatch extends Match
+interface ParametersMatch extends OrderMatch
 {
     /**
      * Sets the parameters to match for, each parameter to this function will

@@ -12,7 +12,7 @@ namespace PHPUnit\Framework\MockObject\Builder;
 /**
  * Builder interface for invocation order matches.
  */
-interface Match extends Stub
+interface OrderMatch extends Stub
 {
     /**
      * Defines the expectation which must occur before the current is valid.
