@@ -305,7 +305,9 @@ final class MockMethod
                     $typeDeclaration = $parameter->getType()->getName() . ' ';
                 } else {
                     try {
-                        $class = $parameter->getClass();
+                        $class = $parameter->getType() && !$parameter->getType()->isBuiltin()
+                            ? new ReflectionClass($parameter->getType()->getName())
+                            : null;
                     } catch (ReflectionException $e) {
                         throw new RuntimeException(
                             \sprintf(
